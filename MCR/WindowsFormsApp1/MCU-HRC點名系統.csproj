@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EC32B13B-2D41-44CF-9699-B20A1C42E90C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MCR</RootNamespace>
+    <AssemblyName>MCR</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>A17BCE2642D8BC047A023A24BE9E100190C0E431</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>WindowsFormsApp1_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>MCR.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=3.3.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.3.3.1\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="CircularProgressBar, Version=2.5.6403.13419, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.5.6403.13419\lib\net35-client\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.8.0.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.8.0\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.2\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="StackExchange.NetGain, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\StackExchange.NetGain.1.0.0.0\lib\net45\StackExchange.NetGain.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tungsten.Firewall, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tungsten.Firewall.1.0.2\lib\net45\Tungsten.Firewall.dll</HintPath>
+    </Reference>
+    <Reference Include="WinFormAnimation, Version=1.5.6298.3372, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.5.6298.3372\lib\net35-client\WinFormAnimation.dll</HintPath>
+    </Reference>
+    <Reference Include="Zen, Version=1.2.0.21, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zen.Core.1.2.0.21\lib\net45\Zen.dll</HintPath>
+    </Reference>
+    <Reference Include="Zen.Barcode.Core, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b5ae55aa76d2d9de, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zen.Barcode.Rendering.Framework.3.1.10729.1\lib\Zen.Barcode.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Zen.DataStore, Version=1.2.0.21, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zen.Core.1.2.0.21\lib\net45\Zen.DataStore.dll</HintPath>
+    </Reference>
+    <Reference Include="Zen.DataStore.EntityFramework, Version=1.2.0.21, Culture=neutral, processorArchitecture=x86">
+      <HintPath>..\packages\Zen.Core.EntityFramework.1.2.0.21\lib\net45\Zen.DataStore.EntityFramework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="base\NetStatesQuerier.cs" />
+    <Compile Include="models\tools\NetStatesManagerImp.cs" />
+    <Compile Include="views\base\RollcallUserDefinedSessionView.cs" />
+    <Compile Include="views\CreateStudentDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\CreateStudentDialog.Designer.cs">
+      <DependentUpon>CreateStudentDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="base\StudentInstancesListener.cs" />
+    <Compile Include="views\EditSessionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\EditSessionDialog.Designer.cs">
+      <DependentUpon>EditSessionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="models\tools\McuInstallerFactory.cs" />
+    <Compile Include="models\viewmodels\RollcallSession.cs" />
+    <Compile Include="base\StudentStatesManipulator.cs" />
+    <Compile Include="models\viewmodels\StudentRollcallRecord.cs" />
+    <Compile Include="Secret.cs" />
+    <Compile Include="utils\DialogUtils.cs" />
+    <Compile Include="utils\FileUtils.cs" />
+    <Compile Include="utils\MD5Utils.cs" />
+    <Compile Include="models\tools\StudentRollcallRecordsExporter.cs" />
+    <Compile Include="utils\RijndaelUtils.cs" />
+    <Compile Include="views\EntryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\EntryForm.Designer.cs">
+      <DependentUpon>EntryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="utils\ViewUtils.cs" />
+    <Compile Include="views\AccountSettingDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\AccountSettingDialog.Designer.cs">
+      <DependentUpon>AccountSettingDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="adapters\BaseTextParsers.cs" />
+    <Compile Include="adapters\CompressorImp.cs" />
+    <Compile Include="adapters\MingChuanAdapter.cs" />
+    <Compile Include="adapters\RijndaelEncryptor.cs" />
+    <Compile Include="adapters\TextParser.cs" />
+    <Compile Include="adapters\RollcallWebBrowserAdapter.cs" />
+    <Compile Include="adapters\SpeechSynthesizerAdapter.cs" />
+    <Compile Include="views\base\BaseRollcallPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\base\BaseViews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\base\StudentsConsoleView.cs" />
+    <Compile Include="views\base\RollcallView.cs" />
+    <Compile Include="base\StudentStatesQuerier.cs" />
+    <Compile Include="base\SessionStatesQuerier.cs" />
+    <Compile Include="views\DeveloperInfoDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\DeveloperInfoDialog.Designer.cs">
+      <DependentUpon>DeveloperInfoDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\base\LoggerView.cs" />
+    <Compile Include="views\ExportingMcrInstallerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\ExportingMcrInstallerDialog.Designer.cs">
+      <DependentUpon>ExportingMcrInstallerDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\ExportingSignRecordDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\ExportingSignRecordDialog.Designer.cs">
+      <DependentUpon>ExportingSignRecordDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\presenters\RollcallUserDefinedSessionPresenter.cs" />
+    <Compile Include="views\presenters\StudentsConsolePresenter.cs" />
+    <Compile Include="views\QRCodeConsolePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\QRCodeConsolePanel.Designer.cs">
+      <DependentUpon>QRCodeConsolePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\RollcallUserDefinedSessionPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\RollcallUserDefinedSessionPanel.Designer.cs">
+      <DependentUpon>RollcallUserDefinedSessionPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\RollcallWebPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\RollcallWebPanel.Designer.cs">
+      <DependentUpon>RollcallWebPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\ServerSettingDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\ServerSettingDialog.Designer.cs">
+      <DependentUpon>ServerSettingDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\SetStudentBeingAbsentReasonDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\SetStudentBeingAbsentReasonDialog.Designer.cs">
+      <DependentUpon>SetStudentBeingAbsentReasonDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\StudentCell.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\StudentCell.Designer.cs">
+      <DependentUpon>StudentCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserConfig.cs" />
+    <Compile Include="views\SessionManagementDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\SessionManagementDialog.Designer.cs">
+      <DependentUpon>SessionManagementDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\CreateSessionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\CreateSessionDialog.Designer.cs">
+      <DependentUpon>CreateSessionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="models\viewmodels\RollcallStudent.cs" />
+    <Compile Include="server\ResourceController.cs" />
+    <Compile Include="server\RollCallController.cs" />
+    <Compile Include="server\SignController.cs" />
+    <Compile Include="utils\CrossFrameIE.cs" />
+    <Compile Include="exceptions\RollcallStatusException.cs" />
+    <Compile Include="views\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="McrFactory.cs" />
+    <Compile Include="fileProcessors\TextParsingDecorator.cs" />
+    <Compile Include="fileProcessors\FileProcessorDecorator.cs" />
+    <Compile Include="fileProcessors\StubFileProcessor.cs" />
+    <Compile Include="models\Participation.cs" />
+    <Compile Include="models\repositories\ApringFileMcrRepository.cs" />
+    <Compile Include="models\repositories\CacheFileMcrRepositoryProxy.cs" />
+    <Compile Include="models\repositories\McrRepository.cs" />
+    <Compile Include="models\repositories\StubMcrRepository.cs" />
+    <Compile Include="models\Session.cs" />
+    <Compile Include="models\Student.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReleaseMcrFactory.cs" />
+    <Compile Include="fileProcessors\FileProcessor.cs" />
+    <Compile Include="utils\HtmlTagUtils.cs" />
+    <Compile Include="utils\NetUtils.cs" />
+    <Compile Include="utils\Log.cs" />
+    <Compile Include="fileProcessors\TxtFileProcessor.cs" />
+    <Compile Include="utils\MingChuanUtils.cs" />
+    <Compile Include="views\presenters\SessionManagementPresenter.cs" />
+    <Compile Include="views\base\SessionManagementView.cs" />
+    <Compile Include="server\RollcallServer.cs" />
+    <Compile Include="adapters\TTS.cs" />
+    <Compile Include="views\StudentsConsolePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\StudentsConsolePanel.Designer.cs">
+      <DependentUpon>StudentsConsolePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\StudentsTableLayoutPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\WhatIsMCUInstallerDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\WhatIsMCUInstallerDialog.Designer.cs">
+      <DependentUpon>WhatIsMCUInstallerDialog.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="views\CreateStudentDialog.resx">
+      <DependentUpon>CreateStudentDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\EditSessionDialog.resx">
+      <DependentUpon>EditSessionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\EntryForm.resx">
+      <DependentUpon>EntryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\AccountSettingDialog.resx">
+      <DependentUpon>AccountSettingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\DeveloperInfoDialog.resx">
+      <DependentUpon>DeveloperInfoDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\ExportingMcrInstallerDialog.resx">
+      <DependentUpon>ExportingMcrInstallerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\ExportingSignRecordDialog.resx">
+      <DependentUpon>ExportingSignRecordDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\QRCodeConsolePanel.resx">
+      <DependentUpon>QRCodeConsolePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\RollcallUserDefinedSessionPanel.resx">
+      <DependentUpon>RollcallUserDefinedSessionPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\RollcallWebPanel.resx">
+      <DependentUpon>RollcallWebPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\ServerSettingDialog.resx">
+      <DependentUpon>ServerSettingDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\SessionManagementDialog.resx">
+      <DependentUpon>SessionManagementDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\CreateSessionDialog.resx">
+      <DependentUpon>CreateSessionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="views\SetStudentBeingAbsentReasonDialog.resx">
+      <DependentUpon>SetStudentBeingAbsentReasonDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\StudentCell.resx">
+      <DependentUpon>StudentCell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\StudentsConsolePanel.resx">
+      <DependentUpon>StudentsConsolePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\WhatIsMCUInstallerDialog.resx">
+      <DependentUpon>WhatIsMCUInstallerDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="WindowsFormsApp1_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Interop.SHDocVw.dll" />
+    <Content Include="Resources\anonymous.png" />
+    <Content Include="Resources\computer.ico" />
+    <None Include="Resources\webbrowserNextPageBtn.Image.png" />
+    <None Include="Resources\03361204.jpg" />
+    <None Include="Resources\notcome.png" />
+    <None Include="Resources\come.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="SHDocVw">
+      <Guid>{EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="SpeechLib">
+      <Guid>{C866CA3A-32F7-11D2-9602-00C04F8EE628}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 與 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
