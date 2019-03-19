@@ -17,6 +17,7 @@ Secret.cs
 
 # Build results
 [Dd]ebug/
+[Bb]in/
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
@@ -25,13 +26,6 @@ x86/
 bld/
 [Oo]bj/
 [Ll]og/
-
-# Ignore all under /bin but exclude the public-resources folder
-![Bb]in/
-[Bb]in/*
-![Bb]in/Debug/
-[Bb]in/Debug/*
-[Bb]in/Debug/public-resources/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/

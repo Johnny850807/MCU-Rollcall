@@ -42,7 +42,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(107, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "系統版本 v1.1";
+            this.label1.Text = "系統版本 v1.4";
             // 
             // label2
             // 
