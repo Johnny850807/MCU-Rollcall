@@ -353,7 +353,8 @@ namespace MCR
                 var item = contextMenuHeader.Items.Add(ip);
                 item.Click += (s, eg) =>
                 {
-                    if (server != null) netStatesManager.setIp(ip);
+                    if (server != null)
+                        netStatesManager.setIp(ip);
                     addNewLog("伺服器 IP 已改變為： " + ip + ", 請重啟伺服器。");
                 };
             }

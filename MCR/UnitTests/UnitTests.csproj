@@ -55,8 +55,6 @@
     <Compile Include="TestMcrRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestLogger.cs" />
-    <Compile Include="TestRollcallView.cs" />
-    <Compile Include="TestMcrCaches.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
