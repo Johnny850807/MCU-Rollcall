@@ -6,6 +6,7 @@ Ming-Chuan University QR Code Rollcall System -【點銘】銘傳QR碼點名系�
 
 - [FEATURES](#features)
 - [TODO](#todo)
+- [BUILD](#build)
 - [DEMO](#demo)
 - [DEVELOPERS](#developters)
 
@@ -22,6 +23,14 @@ TODO
 - DEBUG, the project hasn't been full working well.
 - Improve the GUI.
 
+
+BUILD
+===
+
+1. git clone https://github.com/Johnny850807/MCU-Rollcall.git
+2. There is a directory called 'public-resources', 
+move it to the directory where your exe runs. (Otherwise 
+you will get DirectoryNotFoundException thrown during execute RollcallServer.)
 
 DEMO
 ===

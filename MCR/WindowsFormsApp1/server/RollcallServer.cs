@@ -9,6 +9,7 @@ using MCR.utils;
 using System.Text;
 using System.Net;
 using System.Timers;
+using System.IO;
 
 namespace MCR.server
 {
@@ -44,7 +45,16 @@ namespace MCR.server
 
         static RollcallServer()
         {
-            ResourceController.prepareResources();
+            try
+            {
+
+                ResourceController.prepareResources();
+            } catch (DirectoryNotFoundException err)
+            {
+                Console.WriteLine(err.StackTrace);
+                throw err;
+            }
+         
         }
 
         public RollcallServer(Session session, NetStatesManager netStatesQuerier, 
