@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace MCR
 {
+    // This is the example of secret, use yours instead.
     public class Secret
     {
         public static readonly byte[] key =
